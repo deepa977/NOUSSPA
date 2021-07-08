@@ -1,0 +1,86 @@
+Template Driven Form
+create a form which is reusable for business purpose, then we create template driven form
+LoginForm
+RegisterForm
+ContactForm
+Feedback form
+
+Directives for TemplateDriven Form is FormsModule which we have to import in app.module.ts
+ngModel-> is used to get the values entered in the controls
+it will detect changes in the value
+it supports 2 ways of binding
+
+HTML -> ts -> retreive the value ->One way binding -> (ngModel)="name"
+
+Html(enter data in html control)->ts->retreive the value
+ts -> change the value -> updated value should be displayed in the html control
+This is two way binding
+[(ngModel)]
+it supports validation of userinput
+
+NgForm directive creates a top level FormGroup and binds it to <form> tag
+
+
+ReactiveForm                         TemplateDriven
+<form formGroup="regform">         <form #regform="ngForm">
+<input type="text" formControlName="id">
+                       <input type="text" id="name" [(ngModel)]="name" #name=ngModel required>
+
+In template driven form most of the code is written in .Html file. In .ts file we just write the logic to deal with the data
+
+
+in ReactiveForm design is done in .html but lot of settings we need to configure in .ts file
+
+
+
+Pipes
+Pipes are simple inbuilt functions which accepts an input and transform data to a format already defined in a function
+
+April 15 1988, pipe-> year -> 1988
+167.89 -> $167.89
+
+pipes are applied to the input data using | symbol
+Routing
+<router-outlet>->app.component.html
+acts as a placeholder that angular dynamically fills based on the current routerlink he has selected
+
+Asp.net ->ContentPlaceHolder
+ASP.NET MVC->@RenderBody()
+Angular-> <router-outlet>
+
+
+
+Services -> it will call a restapi(nodejs) service in angular
+CORS -> Cross Origin Resource Sharing
+node -> http://localhost:8081 -> JSON file with data 
+ListData, GetDataByID, AddData, DeleteData -> restapi service methods 
+
+
+angular -> http://localhost:4200 -> call to these RESTAPI methods of NODEJS are done from angular 
+Enable sharing of resources between 2 different URLs of 2 different application we have to enable CORS
+
+what are a angular services
+components in angular is dealing with presenting the data to the view.
+
+Fetching the data from json file, DB thru a rest api service is handled by services
+
+to work with angular service we need to import a dependency called HttpClientModule in app.module.ts
+
+In NodeJS to enable CORS
+install CORS from npm
+npm -install CORS
+
+Make the changes in Server.js
+const { json } = require('express');
+var express=require('express');
+const cors = require('cors');
+var app=express();
+app.use(cors())
+
+Passing the object of a class in constructor is called Dependency Injection
+
+
+
+
+
+

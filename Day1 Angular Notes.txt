@@ -1,0 +1,202 @@
+Angular
+Angular is a javascript framework which is used for creating reactive single page application
+Angular is used for front end application development 
+
+AngularJS 1.x
+
+Angular 2.0,Angular 5, Angular 6.0, Angular 7.0, Angular 8.0, Angular 9,Angular 14.
+
+what is a SINGLE PAGE APPLICATION?
+these application provides user with a very fluid, reactive and fast experience similar to desktop application
+
+Web Application
+When user clicks on any controls , entire new page is loaded everytime from the server 
+
+SPA
+when user clicks on any controls, entire page is loaded once and only the functionalities of the events is dynamically executed in the current page
+rather than loading the entire new page from the server. So these SPA pages are faster in speed
+
+
+Features of Angular
+angular supports cross platform
+we can execute the angular application on LINUX, MAc, Android
+
+It is used for creating progressive application
+mordern webplatform capabilities to deliver high speed application,offline,zero step installation apps
+
+
+Angular FSD -> Full Stack Development
+Angular is a complete framework of Javascript
+Testing ->we are testing if our application is bug free
+Angular provides karma abd jasmine for unit testing
+karma is a javascript based test runner tool
+jasmine is testing framework for angular apps
+
+Animation Support -> high end choreography applications can be developed using angular
+Accessibility -> any devices we can access angular pages
+
+Angular is front end application development
+Thru RESTAPI we can access backend(DB) also from Angular Application
+
+install angular
+npm install -g @angular/cli
+
+create a new angular project
+ng new <projectname>
+
+angular has a server in which the angular pages will be hosted
+to start the angular server
+cd to angular project
+ng serve -o  -> server will run on port no 4200
+
+why does angular require server?
+Angular code is written in typescript .
+Typescript pages has to be compiled and converted to JS file
+for compiling the angular code we need the server
+
+6 components of angular
+app.component.css
+
+common styles which is used by all the web pages created in angular is defined here
+
+
+app.component.html- is the front page of the app.
+
+
+app.component.spec.ts -> unit testing code is written in this file which will be compiled using jasmine and karma javascript test tool will run the test cases
+
+
+app.component.ts -> code behind file(.aspx.cs), controller file(MVC)
+we can write methods, variables, constructor and we can show the o/p of the variables or methods in the associated .html file of it
+to display the values from the ts file in html , 
+{{}}-> interpolation operator
+it will display the values of a variable or o/p of a method defined in .ts file in .html
+
+app.module.ts
+is also a typescript file
+all dependencies which has to be imported has to be imported in this file
+
+
+app.routing.module.ts
+this is similar to routeconfig.cs in mVc
+it is used to define different page links
+
+package.json
+
+it is a npm configuration file
+it will include details about the packages installed for the angular project
+
+any external resource like images, audio files, video files if we want to use in our angular project
+/app/assets
+create a folder images. add few images which we can refer in the project
+
+index.html -> which is the html file executed in the browser
+
+index.html -> <body> <app-root></app-root>
+<app-root> -> is the selector name for app-component.ts
+app-component.ts -> app.component.html
+
+entry point ts file which gets compiled if any code change is detected
+main.ts -> it will be the first to run and it will initialize all the global configuration
+
+
+we need web pages to be created when we are creating an angular project
+We cannot specify all the design and all the code behind logic in a single file
+app.component.html and app.component.ts
+
+we start creating components(angular) -> asp.net it is creating different web forms
+we can create modules
+we can create services
+
+web pages of a web application is called components in angular
+we can create many components
+we can invoke these components in app.component.html
+
+
+to create different components 
+ng g c <componentname> or
+ng generate component <componentname>
+
+create a new component called Calculator
+Accept input of 2 numbers
+and an op *,/,+,-
+
+Based on the operator calculate on 2 numbers and display the result
+
+<input type="text" #txtnum> -> Simple Forms used for DataBinding
+----
+
+2 types of forms supported in Angular
+
+Reactive Forms
+
+
+Template Forms
+
+
+Both these forms are used to collect user input, execute events , validate the user input 
+
+Reactive Form 
+These forms are most widely preferred
+These forms reusable, testable forms
+To create a reactive form, the following library which we are using has to be registered in app.module.ts 
+
+import {ReactiveFormsModule} from '@angular/forms';
+
+imports ->ReactiveFormsModule
+
+formGroup -> when the form has collection of controls and we need to track the values or track the status if values has changed , then we refer the entire form using <form [formGroup]="name">
+
+Submit -> data has to be submitted -> (ngSubmit)="methodname()"
+Button-> click ->(click)="methodname()"
+
+formControlName -> we can get the value of every control
+we can perform validation also
+<input type="text" identify the control to gets its value using formControlName="anyname"/>
+
+
+within the html file if angular script has to do validation
+if condition is given using *ngIf
+for loop is given using *ngFor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
