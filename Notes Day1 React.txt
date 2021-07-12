@@ -1,0 +1,255 @@
+React JS
+setup for react environment
+Install React
+npm install -g create-react-app
+
+create a react project
+
+npx create-react-app reactproject
+
+start the react web server
+cd reactproject
+npm start
+
+react web server will start at port no 3000
+
+React is also a Javascript library for building user interfaces
+React is used for building SPA
+React allows us to create reuable UI components
+Create is a Javascript library created by FaceBook
+
+How does React work?
+react works by the concept of VIRTUAL DOM
+javascript -> DOM Directly
+java script will manipulate the browser's DOM directly
+
+React-> will create a virtual DOM in memory, does all manipulation to the virtual DOM and then changes the browser DOM
+
+React only changes what needs to be changed
+FB Software developer Jordan Walke created REACT
+Latest version on REACT @4.0.3
+
+ES6 standards are used by React
+typescript -> classes, arrow functions, variables(let, const,var)
+
+
+Angular components create
+.css
+.html
+.spec.ts
+.ts
+
+React
+App.css
+APP.js -> front page of a react application
+
+app.test.js 
+
+we can create our own components in the form of const, class,methods
+it is nothing but a .js file
+our own component
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+multiple html statements
+
+const varname=(do any html form design );
+
+ReactDOM.render(varname, document.getElementById("id")(/public/index.html. define any tags like span, div which acts like a placeholder to render the o/p));
+
+where we define different <div> placeholder with IDs
+index.html 
+class classname extends React.Component
+{
+render()
+{
+return business logic;
+}
+}
+
+
+
+public -> index.html -> page will be rendered on the browser
+src-> app.js
+we can create our own folder , inside that we can create our own app
+class
+const variables
+
+RenderDOM.render(class,html tag elements id);
+
+index.js
+
+React Renders HTML to the web page by using the function ReactDOM.render()
+
+
+React JSX
+JSX -> Javascript XML
+JSX allows us to write HTML in React
+
+Write a expression in JSX -> expression should be written inside {}
+
+const add=<h1> Add 2 Number {5+5} using JSX Expression</h1>
+
+const mytable=(
+write any html code
+
+ );
+
+In React , ClassName, Expr Name, Function Name should begin with Uppercase character
+
+React Props
+props are arguments passed into react components
+similar to HTML attributes
+
+
+class Car extends React.Component
+{
+render()
+{
+return <h2>I am a {this.props.brand}!</h2>
+}
+
+
+index.js
+ReactDOM.render("<Car brand='FORD'/>,document.getElementById("car"));
+
+React Prop are readonly
+We can assign value when we are rendering the component along with its property
+
+Suppose if the value of the prop changes we get an error
+A react component should inherit from React.Component
+
+props has to be initialized in constructor
+constructor(props)
+{
+super(props);
+}
+
+inline styling thru css using react components
+<h1 style={{color:"red"}} ></h1> 
+multiple styles
+
+const styles=
+{
+background-color:"red",
+color:"cyan",
+font-size:12px;
+};
+
+<h1 style={styles}>
+
+css:backgroud-color
+react css-> camelcased property name
+backgroundColor
+fontSize
+textDecoration
+
+
+React State
+React Events
+React Forms
+How to call our Node Application RestFul API Service in React
+
+React State
+Typescript
+class PersonInfo
+{
+id:number;
+name:string;
+email:string;
+mobNo:number;
+
+constructor(id:number,name:string.....)
+{}
+
+In react the datamembers like ID,name,Email .... are called Property in React
+React component has an inbuilt state object
+It is used to maintain(store) the property values belonging to the component
+
+
+If the state object changes, the component will re render
+* class, expr or method -> First letter should be in UpperCase
+*react project name-> project name should be in lower case
+
+class UserInfo extends React.Component
+{
+constructor(props)
+{
+super(props);
+this.state={
+id:100;
+name:"Deepa",
+occupation:"Trainer"
+};
+}
+
+render()
+{
+return(
+<div>
+<h1>My Name is {this.state.name}</h1>
+<h2>My id is {this.state.id}</h2>
+<h3>My Occupation is{this.state.occupation}</h3>
+
+</div>
+);
+
+}
+}
+
+export default UserInfo;
+
+Events
+
+in react create a method and call it on a event of a html control
+method can be with parameter or without parameter
+
+
+javascript 
+onClick=add()
+onClick=addNUm(10,20)
+
+React
+onClick={add}
+onClick={AddNum(12,13)}
+Forms and Events
+
+
+1. create state objects for getting the form input value
+event.preventDefault()
+It will show only the values we are submitting. It will not show the default values of the controls like Nan,undefined
+
+myChangeHandler=(event)=>()
+mySubmitHander=(event)=>()
+
+
+
+assignment
+create a react component for CallUserInfoService
+i/p of 
+Name
+Id
+Occupation
+and retreive its value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
